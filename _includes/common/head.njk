@@ -1,0 +1,14 @@
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="author" content="{{ metadata.author.name }}" />
+{% if title %}
+<title>{{ title }} - {{ metadata.title }}</title>
+{% else %}
+<title>{{ metadata.title }}</title>
+{% endif %}
+<link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg" />
+<link rel="stylesheet" href="/assets/css/style.css" />
+<link
+  rel="preconnect dns-prefetch"
+  href="https://ahonn-me.oss-cn-beijing.aliyuncs.com"
+/>

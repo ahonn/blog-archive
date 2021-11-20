@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="{{ metadata.language }}">
+  <head>
+    {% include "common/head.njk" %}
+  </head>
+  <body>
+    <div class="min-h-screen w-full font-sans text-normal leading-normal">
+      {% include "common/header.njk" %}
+      <main class="max-w-screen-md mx-auto">
+        <div class="px-4 sm:px-6 overflow-hidden">
+          {{ content | safe }}
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

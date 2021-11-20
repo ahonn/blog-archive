@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  --primary-color: #d23669;
+  --secondary-color: #edf2f7;
+  --text-normal-color: #222;
+  --background: #f7fafc;
+  --code-background: #011627;
+  --inline-code-background: #fffaf0;
+  --image-opacity: 1;
+}
+
+@font-face {
+  font-family: Comforter;
+  font-style: normal;
+  font-weight: 400;
+  src: url(/assets/font/Comforter-Regular.ttf) format('ttf');
+}
+
+.logo {
+  font-family: 'Comforter', sans-serif !important;
+}

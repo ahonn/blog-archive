@@ -1,0 +1,18 @@
+---
+layout: layouts/base.njk
+---
+<article class="my-6">
+  <header class="mb-2">
+    <h1 class="my-2 text-primary text-3xl font-sans tracking-wide">
+      {{ title }}
+    </h1>
+    <div>
+      <time class="mr-2 text-sm text-gray-600 dark:text-gray-400">
+        {{ page.date | format("yyyy-MM-dd EEEE") }}
+      </time>
+    </div>
+  </header>
+  <section>
+    {{ content | safe }}
+  </section>
+</article>

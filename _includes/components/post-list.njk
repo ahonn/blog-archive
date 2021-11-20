@@ -1,0 +1,11 @@
+<ol>
+{% for post in postslist %}
+  <li>
+    <a href="{{ post.url | url }}">
+      {{ post.data.title }}
+    <time>
+      {{ post.date | format("yyyy-MM-dd") }}
+    </time>
+  </li>
+{% endfor %}
+</ol>
