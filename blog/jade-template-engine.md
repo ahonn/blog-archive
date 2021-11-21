@@ -18,7 +18,7 @@ Jade 是 JavaScript 实现的，供 Node 使用，原生支持 Express。但也�
 
 Jade 写起来就跟在 Sublime Text 中用 Emmet 写 HTML 一样。标签直接写，Class 用 `.`，ID 用 `#`。不同的是，层级关系 Jade 使用缩进表示，类似于 Python，而 Emmet 插件的写法是只有一行的。结果写出来就是这个样子滴：
 
-```jade
+```pug
 doctype html
 html
 	head.class
@@ -42,7 +42,7 @@ html
 
 那么问题来了，其他属性怎么办？不是 Class 和 id 的话，就可以在 标签后面加个括号，写在括号里面。当属性值 `undefined` 或者 `null` 时，该属性将不会编译。
 
-```jade
+```pug
 a(href="http://www.ahonn.me", class=null)
 ```
 
@@ -58,7 +58,7 @@ a(href="http://www.ahonn.me", class=null)
 
 那么标签里的文本怎么写呢，so easy~ 只要跟在标签的后面就行了。Like this:
 
-```jade
+```pug
 a(href="http://www.ahonn.me") Ahonn
 ```
 
@@ -72,7 +72,7 @@ a(href="http://www.ahonn.me") Ahonn
 
 使用 `|`：
 
-```jade
+```pug
 p
   | one
   | two
@@ -81,7 +81,7 @@ p
 
 使用`.`:
 
-```jade
+```pug
 p.
   one
   two
@@ -105,7 +105,7 @@ p.
 
 例如：
 
-```jade
+```pug
 - var name = "ahonn"
 p.
  My name is #{name}
@@ -121,7 +121,7 @@ p.
 
 jade 支持 HTML 的注释，即在 html 代码中能看到的注释，还有一种是 Jade 的注释，不会被渲染。
 
-```jade
+```pug
 // HTML 注释
 p foo
 //- Jade 注释，这个注释只有在 .jade 文件中显示
@@ -140,7 +140,7 @@ p bar
 
 在 Jade 中可以定义变量，写条件语句或者循环什么的，这时候就需要使用到 `-` 前缀，这不会被输出。 `-` 支持 JavaScript 的语法。
 
-```jade
+```pug
 - var foo = 'bar';
 - if (foo === 'bar')
 - for (var key in obj)
@@ -151,7 +151,7 @@ p bar
 
 **循环**：
 
-```jade
+```pug
 - var items = ["one", "two", "there"]
 each item, i in items
   li #{item}: #{i}
@@ -169,7 +169,7 @@ each item, i in items
 
 条件语句类似 Python，不需要加 `()`
 
-```jade
+```pug
 for user in users
   if user.role == 'admin'
     p #{user.name} is an admin
@@ -181,7 +181,7 @@ Jade 支持转义和非转义输出，使用 `=` 时将会转义，而 `!=` 将�
 
 例如：
 
-```jade
+```pug
 - var  ahonn = 'nnoha'
 p= ahonn
 p!= ahonn
@@ -204,7 +204,7 @@ Jade 支持通过 `block` 和 `extends` 关键字老实现模版继承，`block`
 
 layout.jade
 
-```jade
+```pug
 !!!
 html
   head
@@ -215,7 +215,7 @@ html
 
 index.jade
 
-```jade
+```pug
 extends layout
 
 block title
@@ -250,14 +250,14 @@ Jade 可以使用 `include` 静态包含其他文件
 
 head.jade
 
-```jade
+```pug
 head
   title!= ahonn
 ```
 
 body.jade
 
-```jade
+```pug
 body
   p.
     My name is ahonn.
@@ -266,7 +266,7 @@ body
 
 index.jade
 
-```jade
+```pug
 html
   include head
   include body
@@ -280,7 +280,7 @@ Mixins 相当于 JavaScript 中的函数，实际上 Mixins 在编译过程中�
 
 不带参数的 🌰：
 
-```jade
+```pug
 mixin list
   ul
 	li foo
@@ -302,7 +302,7 @@ h2!= Ahonn
 
 带参数的 🌰：
 
-```jade
+```pug
 mixin list(items)
   ul
     - each item in items

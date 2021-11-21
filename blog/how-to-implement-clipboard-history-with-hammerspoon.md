@@ -2,6 +2,7 @@
 layout: post
 title: 如何使用 Hammerspoon 实现剪贴板历史
 date: 2019-04-30
+featured: true
 ---
 
 ## 写在前面

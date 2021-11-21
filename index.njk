@@ -2,8 +2,29 @@
 layout: layouts/home.njk
 ---
 
-<div class="my-6">
-  <h1 class="my-2 text-primary text-2xl font-sans logo">Posts</h1>
-  {% set postslist = collections.displayablePosts | reverse %}
-  {% include "components/post-list.njk" %}
+<div class="my-10 flex flex-col sm:flex-row sm:items-center">
+  <img
+    class="w-24 h-24 rounded-full opacity-75 sm:mr-8 mb-4 sm:mb-0"
+    src="/assets/img/avatar.jpeg" 
+    alt="{{ metadata.author.name }}"
+/>
+  <div class="leading-loose text-tiny">
+    {% for text in metadata.introduction %}
+      <p>{{ text }}</p>
+    {% endfor %}
+  </div>
+</div>
+
+<div class="my-8">
+  <h1 class="my-3 text-primary text-2xl font-semibold logo">Featured</h1>
+  {% set postslist = collections.featured | reverse | head(15) %}
+  <ol>
+    {% for post in postslist %}
+      <li class="mb-2">
+        <a href="{{ post.url | url }}" class="text-tiny hover:text-primary">
+          {{ post.data.title }}
+        </a>
+      </li>
+    {% endfor %}
+  </ol>
 </div>

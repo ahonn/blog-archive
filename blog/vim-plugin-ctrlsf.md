@@ -24,7 +24,7 @@ $ brew install ack
 
 然后安装 ctrlsf.vim 插件
 
-```viml
+```vim
 Plug 'dyng/ctrlsf.vim'
 ```
 
@@ -34,7 +34,7 @@ Plug 'dyng/ctrlsf.vim'
 
 我把 `Ctrl-f` 映射到了 `:CrtlSF<Space>`，这样就可以直接 `Ctrl-f` 然后直接输入、回车进行全局搜索了。
 
-```viml
+```vim
 nnoremap <C-f> :CtrlSF<Space>
 ```
 

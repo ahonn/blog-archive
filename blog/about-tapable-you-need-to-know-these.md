@@ -2,6 +2,7 @@
 layout: post
 title: 关于 tapable 你需要知道这些
 date: 2019-08-21
+featured: true
 ---
 
 在阅读 webpack 前如果不了解 [tapable](https://github.com/webpack/tapable) 的话，很有可能会看得云里雾里，那么 tapable 到底是什么，又有什么用呢？本文主要介绍 tapable 的使用以及相关实现，通过学习 tapable 能够进一步的了解 webpack 的插件机制。以下内容皆基于 [tapable v1.1.3 版本](https://github.com/webpack/tapable/tree/tapable-1)。
@@ -19,16 +20,16 @@ tapable 是一个类似于 Node.js 中的 EventEmitter 的库，但更专注于�
 以最简单的 SyncHook 为例：
 
 ```js
-const { SyncHook } = require('tapable');
-const hook = new SyncHook(['name']);
-hook.tap('hello', (name) => {
+const { SyncHook } = require("tapable");
+const hook = new SyncHook(["name"]);
+hook.tap("hello", (name) => {
   console.log(`hello ${name}`);
 });
-hook.tap('hello again', (name) => {
+hook.tap("hello again", (name) => {
   console.log(`hello ${name}, again`);
 });
 
-hook.call('ahonn');
+hook.call("ahonn");
 // hello ahonn
 // hello ahonn, again
 ```
@@ -50,18 +51,18 @@ hook.call('ahonn');
 AsyncParallelHook 顾名思义是并行执行的异步钩子，当注册的所有异步回调都并行执行完毕之后再执行 callAsync 或者 promise 中的函数。
 
 ```js
-const { AsyncParallelHook } = require('tapable');
-const hook = new AsyncParallelHook(['name']);
+const { AsyncParallelHook } = require("tapable");
+const hook = new AsyncParallelHook(["name"]);
 
-console.time('cost');
+console.time("cost");
 
-hook.tapAsync('hello', (name, cb) => {
+hook.tapAsync("hello", (name, cb) => {
   setTimeout(() => {
     console.log(`hello ${name}`);
     cb();
   }, 2000);
 });
-hook.tapPromise('hello again', (name) => {
+hook.tapPromise("hello again", (name) => {
   return new Promise((resolve) => {
     setTimeout(() => {
       console.log(`hello ${name}, again`);
@@ -70,9 +71,9 @@ hook.tapPromise('hello again', (name) => {
   });
 });
 
-hook.callAsync('ahonn', () => {
-  console.log('done');
-  console.timeEnd('cost');
+hook.callAsync("ahonn", () => {
+  console.log("done");
+  console.timeEnd("cost");
 });
 // hello ahonn, again
 // hello ahonn
@@ -93,18 +94,18 @@ hook.callAsync('ahonn', () => {
 如果你想要顺序的执行异步函数的话，显然 AsyncParallelHook 是不适合的。所以 tapable 提供了另外一个基础的异步钩子：AsyncSeriesHook。
 
 ```js
-const { AsyncSeriesHook } = require('tapable');
-const hook = new AsyncSeriesHook(['name']);
+const { AsyncSeriesHook } = require("tapable");
+const hook = new AsyncSeriesHook(["name"]);
 
-console.time('cost');
+console.time("cost");
 
-hook.tapAsync('hello', (name, cb) => {
+hook.tapAsync("hello", (name, cb) => {
   setTimeout(() => {
     console.log(`hello ${name}`);
     cb();
   }, 2000);
 });
-hook.tapPromise('hello again', (name) => {
+hook.tapPromise("hello again", (name) => {
   return new Promise((resolve) => {
     setTimeout(() => {
       console.log(`hello ${name}, again`);
@@ -113,9 +114,9 @@ hook.tapPromise('hello again', (name) => {
   });
 });
 
-hook.callAsync('ahonn', () => {
-  console.log('done');
-  console.timeEnd('cost');
+hook.callAsync("ahonn", () => {
+  console.log("done");
+  console.timeEnd("cost");
 });
 // hello ahonn
 // hello ahonn, again
@@ -140,12 +141,12 @@ tapable 中除了这一些核心的钩子之外还提供了一些功能，例如
 想知道 tapable 的具体实现就必须去阅读相关的源码。由于篇幅有限，这里我们就通过阅读 SyncHook 相关的代码来看看相关实现，其他的钩子思路上大体一致。我们通过以下代码来慢慢深入 tapable 的实现：
 
 ```js
-const { SyncHook } = require('tapable');
-const hook = new SyncHook(['name']);
-hook.tap('hello', (name) => {
+const { SyncHook } = require("tapable");
+const hook = new SyncHook(["name"]);
+hook.tap("hello", (name) => {
   console.log(`hello ${name}`);
 });
-hook.call('ahonn');
+hook.call("ahonn");
 ```
 
 ### 入口
@@ -248,17 +249,17 @@ function createCompileDelegate(name, type) {
 
 Object.defineProperties(Hook.prototype, {
   _call: {
-    value: createCompileDelegate('call', 'sync'),
+    value: createCompileDelegate("call", "sync"),
     configurable: true,
     writable: true,
   },
   _promise: {
-    value: createCompileDelegate('promise', 'promise'),
+    value: createCompileDelegate("promise", "promise"),
     configurable: true,
     writable: true,
   },
   _callAsync: {
-    value: createCompileDelegate('callAsync', 'async'),
+    value: createCompileDelegate("callAsync", "async"),
     configurable: true,
     writable: true,
   },
@@ -338,7 +339,7 @@ create(options) {
 
 ```js
 function anonymous(name) {
-  'use strict';
+  "use strict";
   var _context;
   var _x = this._x;
   var _fn0 = _x[0];

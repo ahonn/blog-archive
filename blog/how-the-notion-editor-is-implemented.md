@@ -1,7 +1,8 @@
 ---
 layout: post
-title: 'Notion 编辑器是怎么实现的？'
+title: "Notion 编辑器是怎么实现的？"
 date: 2021-03-25
+featured: true
 ---
 
 > 本文写于 2020 年 12 月，当你读到本文时文中提到的部分 Notion 内容可能已经过时，望读者知晓

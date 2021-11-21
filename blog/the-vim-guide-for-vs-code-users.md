@@ -2,6 +2,7 @@
 layout: post
 date: 2020-09-29
 title: 写给 VS Code 用户的 Vim 入坑指南
+featured: true
 ---
 
 现实当中使用 Vim 来写前端的人是少之又少，大多数人基本上都是使用 VSCode。但作为「编辑器之神」，不管使不使用 Vim 进行编码，学习 Vim 的编辑模式都是有好处的。
@@ -149,7 +150,7 @@ title: 写给 VS Code 用户的 Vim 入坑指南
 
 例如我们可以把上面的字符串的命令映射到某一个快捷键上，在 `~/.vimrc` 文件中添加如下内容：
 
-```viml
+```vim
 nnoremap <C-f> :s/
 ```
 
@@ -215,7 +216,7 @@ Vim 中提供了「宏」来方便进行一系列的操作，简单来说就是�
 
 ### 显示相对行号
 
-```viml
+```vim
 set number
 set relativenumber
 ```

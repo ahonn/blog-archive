@@ -2,6 +2,7 @@
 layout: post
 title: 从零开始制作 Hexo 主题
 date: 2016-12-15
+featured: true
 ---
 
 ## 写在前面

@@ -2,6 +2,7 @@
 layout: post
 title: 从 @babel/register 到 node.js require()
 date: 2019-04-09
+featured: true
 ---
 
 通常我们会用 babel 来将浏览器未兼容的新语法编译为兼容的代码，以便在旧浏览器或者环境下运行。
@@ -12,7 +13,7 @@ date: 2019-04-09
 使用 @babel/register 的方式很简单，只需要将以下代码放在需要编译运行的代码引入前：
 
 ```js
-require('@babel/register');
+require("@babel/register");
 ```
 
 值得注意的是当所需的功能需要使用 polyfill 来实现时，你必须将它们逐个引入。
@@ -22,7 +23,7 @@ require('@babel/register');
 相关代码：
 
 ```js
-import { addHook } from 'pirates';
+import { addHook } from "pirates";
 
 // ...
 
@@ -67,11 +68,11 @@ Module._extensions[ext] = function newLoader(mod, filename) {
 
 ```js
 /* index.js */
-const Module = require('module');
-const flowRemoveTypes = require('flow-remove-types');
+const Module = require("module");
+const flowRemoveTypes = require("flow-remove-types");
 
-const oldLoader = Module._extensions['.js'];
-Module._extensions['.js'] = function (mod, filename) {
+const oldLoader = Module._extensions[".js"];
+Module._extensions[".js"] = function (mod, filename) {
   let compile = mod._compile;
   mod._compile = function _compile(code) {
     mod._compile = compile;
@@ -81,8 +82,8 @@ Module._extensions['.js'] = function (mod, filename) {
   oldLoader(mod, filename);
 };
 
-const hello = require('./hello.js');
-hello('ahonn');
+const hello = require("./hello.js");
+hello("ahonn");
 
 /* hello.js */
 // @flow

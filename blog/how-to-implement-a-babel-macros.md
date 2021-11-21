@@ -32,7 +32,7 @@ babel-plugin-macros 显而易见是一个 babel 插件，它提供了一种零�
 
 ```js
 // 编译前
-import preval from 'preval.macro';
+import preval from "preval.macro";
 const one = preval`module.exports = 1 + 2 - 1 - 1`;
 
 // 编译后
@@ -49,7 +49,7 @@ const one = 3;
 
 一般情况下，我们可以将 .env 中的某些配置传入 webpack 的 DefinePlugin 插件中，前端代码通过读取全局变量的方式进行访问。现在我们通过 Babel macros 的方式来实现如下效果：
 
-```sh
+```bash
 # .env
 NAME=ahonn
 NUMBER=123
@@ -57,14 +57,14 @@ NUMBER=123
 
 ```js
 // 编译前
-import dotenv from 'dotenv.macro';
+import dotenv from "dotenv.macro";
 
-const NAME = dotenv('NAME');
-const NUMBER = dotenv('NUMBER');
+const NAME = dotenv("NAME");
+const NUMBER = dotenv("NUMBER");
 
 // 编译后
-const NAME = 'ahonn';
-const NUMBER = '123';
+const NAME = "ahonn";
+const NUMBER = "123";
 ```
 
 ### 创建 Macro
@@ -74,7 +74,7 @@ babel-plugin-macros 会把引入的 .macro 或者 .macro.js 当成宏进行处�
 如果没有通过 `createMacro` 进行包装的话，执行 `babel` 就会提示：`The macro imported from "../../dotenv.macro" must be wrapped in "createMacro" which you can get from "babel-plugin-macros".`
 
 ```js
-const { createMacro } = require('babel-plugin-macros');
+const { createMacro } = require("babel-plugin-macros");
 
 module.exports = createMacro(({ references, state, babel }) => {
   // TODO
@@ -102,7 +102,7 @@ module.exports = createMacro(({ references, state, babel }) => {
 我们只对函数形式调用处理：
 
 ```js
-const { createMacro } = require('babel-plugin-macros');
+const { createMacro } = require("babel-plugin-macros");
 
 module.exports = createMacro(({ references, state, babel }) => {
   references.default.forEach((path) => {
@@ -118,15 +118,15 @@ module.exports = createMacro(({ references, state, babel }) => {
 做完前置的条件判断之后，现在我们就可以通过 `dotenv` 来获取 `.env` 中配置的值，然后将对应的值替换对应的 AST 节点，从而使得编译后的代码在 macro 引用位置被替换为目标值。
 
 ```js
-const dotenv = require('dotenv');
-const { createMacro } = require('babel-plugin-macros');
+const dotenv = require("dotenv");
+const { createMacro } = require("babel-plugin-macros");
 
 module.exports = createMacro(({ references, state, babel }) => {
   const env = dotenv.config();
 
   references.default.forEach((path) => {
     if (path.parentPath && babel.types.isCallExpression(path.parentPath)) {
-      const args = path.parentPath.get('arguments');
+      const args = path.parentPath.get("arguments");
       const key = args[0].evaluate().value;
       const value = env.parsed[key]; // ahonn
     }
@@ -144,19 +144,19 @@ module.exports = createMacro(({ references, state, babel }) => {
 - `const NUMBER = dotenv('NUMBER');` 转换为 `const NUMBER = 123;`
 
 ```js
-const dotenv = require('dotenv');
-const { createMacro } = require('babel-plugin-macros');
+const dotenv = require("dotenv");
+const { createMacro } = require("babel-plugin-macros");
 
 module.exports = createMacro(({ references, state, babel }) => {
   const env = dotenv.config();
 
   references.default.forEach((path) => {
     if (path.parentPath && babel.types.isCallExpression(path.parentPath)) {
-      const args = path.parentPath.get('arguments');
+      const args = path.parentPath.get("arguments");
       const key = args[0].evaluate().value;
       const value = env.parsed[key];
 
-      if (typeof value === 'number') {
+      if (typeof value === "number") {
         path.parentPath.replaceWith(babel.types.numericLiteral(value));
       } else {
         path.parentPath.replaceWith(babel.types.stringLiteral(value));

@@ -38,7 +38,7 @@ title: CSS 实现垂直居中
 
 当不知道子元素的宽高时，这种方法就无法实现正真的垂直居中。这个时候就可以使用 `transform: translate(-50%, -50%);` 来实现子元素自身的偏移。
 
-```CSS
+```css
 .parent {
   position: relative;
 }
@@ -57,7 +57,7 @@ title: CSS 实现垂直居中
 
 这样就可以实现不使用定位来来使得元素垂直居中了。
 
-```CSS
+```css
 .chilren {
   margin: 50% auto 0;
   transform: translateY(50%);
@@ -68,7 +68,7 @@ title: CSS 实现垂直居中
 
 只需要在父元素中使用 `display: flex;`，然后在子元素上使用 `margin: auto;` 就可以实现垂直居中了。
 
-```CSS
+```css
 .parent {
   display: flex;
 }

@@ -2,6 +2,7 @@
 layout: post
 date: 2017-03-16
 title: 阿里巴巴暑假实习面试总结
+featured: true
 ---
 
 2 月末的时候，通过 [simplyY](https://simplyy.space/) 内推了阿里巴巴暑期实习的前端开发岗，在此表示感谢。

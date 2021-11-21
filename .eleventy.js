@@ -1,13 +1,17 @@
 const format = require('date-fns/format');
-const isAfter = require('date-fns/isAfter');
 const Image = require('@11ty/eleventy-img');
-const TailwindCSSPlugin = require('eleventy-plugin-tailwindcss');
-
-const year2020 = new Date('2020-12-31');
+const TailwindCSS = require('eleventy-plugin-tailwindcss');
+const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const rss = require("@11ty/eleventy-plugin-rss");
 
 module.exports = function (eleventyConfig) {
-  eleventyConfig.addPlugin(TailwindCSSPlugin);
+  eleventyConfig.addPlugin(TailwindCSS);
+  eleventyConfig.addPlugin(syntaxHighlight);
+  eleventyConfig.addPlugin(rss);
+
+  eleventyConfig.addPassthroughCopy('assets/css/prism');
   eleventyConfig.addPassthroughCopy('assets/img');
+  eleventyConfig.addPassthroughCopy('assets/font');
 
   eleventyConfig.addLayoutAlias('post', 'layouts/post.njk');
 
@@ -16,6 +20,15 @@ module.exports = function (eleventyConfig) {
   });
   eleventyConfig.addNunjucksFilter('min', (...numbers) => {
     return Math.min.apply(null, numbers);
+  });
+  eleventyConfig.addFilter("head", (array, n) => {
+    if(!Array.isArray(array) || array.length === 0) {
+      return [];
+    }
+    if( n < 0 ) {
+      return array.slice(n);
+    }
+    return array.slice(0, n);
   });
 
   eleventyConfig.addNunjucksAsyncShortcode('image', async (src, alt, sizes) => {
@@ -29,15 +42,11 @@ module.exports = function (eleventyConfig) {
     return Image.generateHTML(metadata, imageAttributes);
   });
 
-  eleventyConfig.addCollection('displayablePosts', function (collection) {
+  eleventyConfig.addCollection('featured', function (collection) {
     return collection
       .getAll()
-      .filter((item) => {
-        // 只显示 2020 年之后的文章
-        const isAfter2020 = isAfter(new Date(item.data.date), year2020);
-        return item.data.layout === 'post' && isAfter2020;
-      })
-      .sort((a, b) => !isAfter(new Date(a.data.date), new Date(b.data.date)));
+      .filter((item) => item.data.featured)
+      .sort((a, b) => new Date(a.data.date) - new Date(b.data.date));
   });
 
   console.log(eleventyConfig);

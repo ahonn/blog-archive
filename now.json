@@ -1,0 +1,1145 @@
+{
+  "version": 2,
+  "routes": [
+    {
+      "src": "^/(.*).html",
+      "headers": {
+        "cache-control": "public,max-age=0,must-revalidate"
+      }
+    },
+    {
+      "src": "/atom.xml",
+      "status": 301,
+      "headers": {
+        "Location": "/rss.xml"
+      }
+    },
+    {
+      "src": "/2018/12/30/summary-of-2018/",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/2018-summary"
+      }
+    },
+    {
+      "src": "/2018/11/17/date-in-different-browsers/",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/javascript-date-in-different-browsers"
+      }
+    },
+    {
+      "src": "/2018/09/15/javascript-functional-programming-notes/",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/javascript-functional-programming-notes"
+      }
+    },
+    {
+      "src": "/2017/12/29/my-2017/",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/2017-summary"
+      }
+    },
+    {
+      "src": "/2017/08/31/starting-from-scratch-mac/",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/starting-from-scratch-mac"
+      }
+    },
+    {
+      "src": "/2017/07/24/the-evil-of-the-BOM-ufeff-and-i»¿/",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/the-evil-of-the-BOM-ufeff-and-i»¿"
+      }
+    },
+    {
+      "src": "/2017/07/04/redux-source-code-insight/",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/redux-source-code-insight"
+      }
+    },
+    {
+      "src": "/2017/06/29/vim-plugin-ctrlsf/",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/vim-plugin-ctrlsf"
+      }
+    },
+    {
+      "src": "/2017/06/08/write-a-react-from-scratch-init-render/",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/write-a-react-from-scratch-init-render"
+      }
+    },
+    {
+      "src": "/2017/05/17/koa2-analysis/",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/koa2-analysis"
+      }
+    },
+    {
+      "src": "/2017/03/27/use-neovim/",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/use-neovim"
+      }
+    },
+    {
+      "src": "/2017/03/16/alibaba-summer-internship-interview-summary/",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/alibaba-summer-internship-interview-summary"
+      }
+    },
+    {
+      "src": "/2017/03/11/answer-front-end-questions/",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/answer-front-end-questions"
+      }
+    },
+    {
+      "src": "/2017/03/02/xmlhttprequest-study-notes/",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/xmlhttprequest-study-notes"
+      }
+    },
+    {
+      "src": "/2017/02/19/notes-of-vim/",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/notes-of-vim"
+      }
+    },
+    {
+      "src": "/2017/01/24/something-about-javaScript-inherit/",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/something-about-javaScript-inherit"
+      }
+    },
+    {
+      "src": "/2016/12/15/create-a-hexo-theme-from-scratch/",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/create-a-hexo-theme-from-scratch"
+      }
+    },
+    {
+      "src": "/2016/12/13/2016-summary/",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/2016-summary"
+      }
+    },
+    {
+      "src": "/2016/11/30/some-ways-of-javascript-create-object/",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/some-ways-of-javascript-create-object"
+      }
+    },
+    {
+      "src": "/2016/11/21/javascript-data-type-judgment/",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/javascript-data-type-judgment"
+      }
+    },
+    {
+      "src": "/2016/11/14/wechat-app-summary/",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/wechat-app-summary"
+      }
+    },
+    {
+      "src": "/2016/10/11/after-the-react-routing-scroll-to-the-top-of-the-page/",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/after-the-react-routing-scroll-to-the-top-of-the-page"
+      }
+    },
+    {
+      "src": "/2016/10/02/react-lifecycle-methods/",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/react-lifecycle-methods"
+      }
+    },
+    {
+      "src": "/2016/09/13/the-memo-of-javascript-regexp/",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/the-memo-of-javascript-regexp"
+      }
+    },
+    {
+      "src": "/2016/08/31/javascript-best-practices/",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/javascript-best-practices"
+      }
+    },
+    {
+      "src": "/2016/08/02/javascript-reduce-the-browser-reflow/",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/javascript-reduce-the-browser-reflow"
+      }
+    },
+    {
+      "src": "/2016/07/25/the-right-way-to-array-of-random-sequence/",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/the-right-way-to-array-of-random-sequence"
+      }
+    },
+    {
+      "src": "/2016/07/13/getting-highlightjs-to-work-with-vue.js/",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/getting-highlightjs-to-work-with-vue.js"
+      }
+    },
+    {
+      "src": "/2016/06/29/vertical-center-for-css/",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/vertical-center-for-css"
+      }
+    },
+    {
+      "src": "/2016/06/07/sass-preliminary-study/",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/sass-preliminary-study"
+      }
+    },
+    {
+      "src": "/2016/05/28/using-nokogiri-parsing-html/",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/using-nokogiri-parsing-html"
+      }
+    },
+    {
+      "src": "/2016/05/14/use-javascript-to-achieve-simple-drag-and-drop/",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/use-javascript-to-achieve-simple-drag-and-drop"
+      }
+    },
+    {
+      "src": "/2016/05/14/the-first-interview/",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/the-first-interview"
+      }
+    },
+    {
+      "src": "/2016/05/03/starting-from-the-optimizeCb/",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/starting-from-the-optimizeCb"
+      }
+    },
+    {
+      "src": "/2016/04/28/javascript-hoisting/",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/javascript-hoisting"
+      }
+    },
+    {
+      "src": "/2016/04/16/javascript-event-stream/",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/javascript-event-stream"
+      }
+    },
+    {
+      "src": "/2016/04/04/javascript-closures/",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/javascript-closures"
+      }
+    },
+    {
+      "src": "/2016/03/29/javascript-prototype-chain/",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/javascript-prototype-chain"
+      }
+    },
+    {
+      "src": "/2016/03/20/javascript-apply-call-and-bind/",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/javascript-apply-call-and-bind"
+      }
+    },
+    {
+      "src": "/2016/02/29/jade-template-engine/",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/jade-template-engine"
+      }
+    },
+    {
+      "src": "/2016/02/20/python-multithreaded-preliminary/",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/python-multithreaded-preliminary"
+      }
+    },
+    {
+      "src": "/2016/01/23/python-curses-module/",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/python-curses-module"
+      }
+    },
+    {
+      "src": "/2015/12/31/2015-summary/",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/2015-summary"
+      }
+    },
+    {
+      "src": "/2015/12/21/how-can-i-prevent-sql-injection-in-php/",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/how-can-i-prevent-sql-injection-in-php"
+      }
+    },
+    {
+      "src": "/2015/12/19/simple-use-of-the-php-curl-library/",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/simple-use-of-the-php-curl-library"
+      }
+    },
+    {
+      "src": "/2015/11/25/the-crawler-of-zhihu-user-dynamic-monitoring/",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/the-crawler-of-zhihu-user-dynamic-monitoring"
+      }
+    },
+    {
+      "src": "/2015/11/22/phpmyadmin-lack-mcrypt-extension/",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/phpmyadmin-lack-mcrypt-extension"
+      }
+    },
+    {
+      "src": "/2015/08/30/sudoers-is-world-writable/",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/sudoers-is-world-writable"
+      }
+    },
+    {
+      "src": "/2015/08/24/ubuntu-lamp-environment-set-up/",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/ubuntu-lamp-environment-set-up"
+      }
+    },
+    {
+      "src": "/p/726425e6",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/how-to-implement-a-babel-macros"
+      }
+    },
+    {
+      "src": "/p/7367ed86",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/about-tapable-you-need-to-know-these"
+      }
+    },
+    {
+      "src": "/p/de693736",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/node.js-dns-module-you-may-not-know"
+      }
+    },
+    {
+      "src": "/p/726429e6",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/node.js-util-module-you-may-not-know"
+      }
+    },
+    {
+      "src": "/p/5b6d5876",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/auto-add-react-hot-loader-to-react-component"
+      }
+    },
+    {
+      "src": "/p/736b3826",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/how-to-implement-clipboard-history-with-hammerspoon"
+      }
+    },
+    {
+      "src": "/p/d9655736",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/from-babel-register-to-nodejs-require"
+      }
+    },
+    {
+      "src": "/p/5b6d5e76",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/2018-summary"
+      }
+    },
+    {
+      "src": "/p/736b3926",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/javascript-date-in-different-browsers"
+      }
+    },
+    {
+      "src": "/p/b3623926",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/javascript-functional-programming-notes"
+      }
+    },
+    {
+      "src": "/p/d9655336",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/2017-summary"
+      }
+    },
+    {
+      "src": "/p/24635e26",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/starting-from-scratch-mac"
+      }
+    },
+    {
+      "src": "/p/d36ad246",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/the-evil-of-the-BOM-ufeff-and-i»¿"
+      }
+    },
+    {
+      "src": "/p/8d6e59b6",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/redux-source-code-insight"
+      }
+    },
+    {
+      "src": "/p/7367e286",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/vim-plugin-ctrlsf"
+      }
+    },
+    {
+      "src": "/p/de693836",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/write-a-react-from-scratch-init-render"
+      }
+    },
+    {
+      "src": "/p/e2682b96",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/koa2-analysis"
+      }
+    },
+    {
+      "src": "/p/d36ad346",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/use-neovim"
+      }
+    },
+    {
+      "src": "/p/8d6e5eb6",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/alibaba-summer-internship-interview-summary"
+      }
+    },
+    {
+      "src": "/p/7367e386",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/answer-front-end-questions"
+      }
+    },
+    {
+      "src": "/p/de693236",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/xmlhttprequest-study-notes"
+      }
+    },
+    {
+      "src": "/p/e2682596",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/notes-of-vim"
+      }
+    },
+    {
+      "src": "/p/726427e6",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/something-about-javaScript-inherit"
+      }
+    },
+    {
+      "src": "/p/5b6d5a76",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/create-a-hexo-theme-from-scratch"
+      }
+    },
+    {
+      "src": "/p/736b3726",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/2016-summary"
+      }
+    },
+    {
+      "src": "/p/b3623826",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/some-ways-of-javascript-create-object"
+      }
+    },
+    {
+      "src": "/p/d9655436",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/javascript-data-type-judgment"
+      }
+    },
+    {
+      "src": "/p/e26828e6",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/wechat-app-summary"
+      }
+    },
+    {
+      "src": "/p/72642b56",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/after-the-react-routing-scroll-to-the-top-of-the-page"
+      }
+    },
+    {
+      "src": "/p/5b6d5bd6",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/react-lifecycle-methods"
+      }
+    },
+    {
+      "src": "/p/736b3a86",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/the-memo-of-javascript-regexp"
+      }
+    },
+    {
+      "src": "/p/b3623496",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/javascript-best-practices"
+      }
+    },
+    {
+      "src": "/p/d96559e6",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/javascript-reduce-the-browser-reflow"
+      }
+    },
+    {
+      "src": "/p/24635486",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/the-right-way-to-array-of-random-sequence"
+      }
+    },
+    {
+      "src": "/p/d36adee6",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/getting-highlightjs-to-work-with-vue.js"
+      }
+    },
+    {
+      "src": "/p/8d6e5b86",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/vertical-center-for-css"
+      }
+    },
+    {
+      "src": "/p/7367ebe6",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/sass-preliminary-study"
+      }
+    },
+    {
+      "src": "/p/d96558e6",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/using-nokogiri-parsing-html"
+      }
+    },
+    {
+      "src": "/p/24635d86",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/use-javascript-to-achieve-simple-drag-and-drop"
+      }
+    },
+    {
+      "src": "/p/d36adae6",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/the-first-interview"
+      }
+    },
+    {
+      "src": "/p/8d6e5886",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/starting-from-the-optimizeCb"
+      }
+    },
+    {
+      "src": "/p/7367e8e6",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/javascript-hoisting"
+      }
+    },
+    {
+      "src": "/p/de693bd6",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/javascript-event-stream"
+      }
+    },
+    {
+      "src": "/p/e2682de6",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/javascript-closures"
+      }
+    },
+    {
+      "src": "/p/72642256",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/javascript-prototype-chain"
+      }
+    },
+    {
+      "src": "/p/5b6d55d6",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/javascript-apply-call-and-bind"
+      }
+    },
+    {
+      "src": "/p/736b3386",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/jade-template-engine"
+      }
+    },
+    {
+      "src": "/p/24635d63",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/python-multithreaded-preliminary"
+      }
+    },
+    {
+      "src": "/p/d36add65",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/python-curses-module"
+      }
+    },
+    {
+      "src": "/p/8d6e5262",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/2015-summary"
+      }
+    },
+    {
+      "src": "/p/7367e56d",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/how-can-i-prevent-sql-injection-in-php"
+      }
+    },
+    {
+      "src": "/p/de69d56b",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/simple-use-of-the-php-curl-library"
+      }
+    },
+    {
+      "src": "/p/e2689469",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/the-crawler-of-zhihu-user-dynamic-monitoring"
+      }
+    },
+    {
+      "src": "/p/72643d64",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/phpmyadmin-lack-mcrypt-extension"
+      }
+    },
+    {
+      "src": "/p/5b6d3e6d",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/sudoers-is-world-writable"
+      }
+    },
+    {
+      "src": "/p/736bd562",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/ubuntu-lamp-environment-set-up"
+      }
+    },
+    {
+      "src": "/post/60",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/how-to-implement-a-babel-macros"
+      }
+    },
+    {
+      "src": "/post/58",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/about-tapable-you-need-to-know-these"
+      }
+    },
+    {
+      "src": "/post/57",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/node.js-dns-module-you-may-not-know"
+      }
+    },
+    {
+      "src": "/post/55",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/node.js-util-module-you-may-not-know"
+      }
+    },
+    {
+      "src": "/post/54",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/auto-add-react-hot-loader-to-react-component"
+      }
+    },
+    {
+      "src": "/post/53",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/how-to-implement-clipboard-history-with-hammerspoon"
+      }
+    },
+    {
+      "src": "/post/51",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/from-babel-register-to-nodejs-require"
+      }
+    },
+    {
+      "src": "/post/49",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/2018-summary"
+      }
+    },
+    {
+      "src": "/post/48",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/javascript-date-in-different-browsers"
+      }
+    },
+    {
+      "src": "/post/47",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/javascript-functional-programming-notes"
+      }
+    },
+    {
+      "src": "/post/46",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/2017-summary"
+      }
+    },
+    {
+      "src": "/post/45",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/starting-from-scratch-mac"
+      }
+    },
+    {
+      "src": "/post/44",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/the-evil-of-the-BOM-ufeff-and-i»¿"
+      }
+    },
+    {
+      "src": "/post/43",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/redux-source-code-insight"
+      }
+    },
+    {
+      "src": "/post/42",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/vim-plugin-ctrlsf"
+      }
+    },
+    {
+      "src": "/post/41",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/write-a-react-from-scratch-init-render"
+      }
+    },
+    {
+      "src": "/post/40",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/koa2-analysis"
+      }
+    },
+    {
+      "src": "/post/39",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/use-neovim"
+      }
+    },
+    {
+      "src": "/post/38",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/alibaba-summer-internship-interview-summary"
+      }
+    },
+    {
+      "src": "/post/37",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/answer-front-end-questions"
+      }
+    },
+    {
+      "src": "/post/36",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/xmlhttprequest-study-notes"
+      }
+    },
+    {
+      "src": "/post/35",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/notes-of-vim"
+      }
+    },
+    {
+      "src": "/post/34",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/something-about-javaScript-inherit"
+      }
+    },
+    {
+      "src": "/post/33",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/create-a-hexo-theme-from-scratch"
+      }
+    },
+    {
+      "src": "/post/32",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/2016-summary"
+      }
+    },
+    {
+      "src": "/post/31",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/some-ways-of-javascript-create-object"
+      }
+    },
+    {
+      "src": "/post/30",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/javascript-data-type-judgment"
+      }
+    },
+    {
+      "src": "/post/29",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/wechat-app-summary"
+      }
+    },
+    {
+      "src": "/post/28",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/after-the-react-routing-scroll-to-the-top-of-the-page"
+      }
+    },
+    {
+      "src": "/post/27",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/react-lifecycle-methods"
+      }
+    },
+    {
+      "src": "/post/26",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/the-memo-of-javascript-regexp"
+      }
+    },
+    {
+      "src": "/post/25",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/javascript-best-practices"
+      }
+    },
+    {
+      "src": "/post/24",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/javascript-reduce-the-browser-reflow"
+      }
+    },
+    {
+      "src": "/post/23",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/the-right-way-to-array-of-random-sequence"
+      }
+    },
+    {
+      "src": "/post/22",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/getting-highlightjs-to-work-with-vue.js"
+      }
+    },
+    {
+      "src": "/post/21",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/vertical-center-for-css"
+      }
+    },
+    {
+      "src": "/post/20",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/sass-preliminary-study"
+      }
+    },
+    {
+      "src": "/post/19",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/using-nokogiri-parsing-html"
+      }
+    },
+    {
+      "src": "/post/18",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/use-javascript-to-achieve-simple-drag-and-drop"
+      }
+    },
+    {
+      "src": "/post/17",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/the-first-interview"
+      }
+    },
+    {
+      "src": "/post/16",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/starting-from-the-optimizeCb"
+      }
+    },
+    {
+      "src": "/post/15",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/javascript-hoisting"
+      }
+    },
+    {
+      "src": "/post/14",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/javascript-event-stream"
+      }
+    },
+    {
+      "src": "/post/13",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/javascript-closures"
+      }
+    },
+    {
+      "src": "/post/12",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/javascript-prototype-chain"
+      }
+    },
+    {
+      "src": "/post/11",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/javascript-apply-call-and-bind"
+      }
+    },
+    {
+      "src": "/post/10",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/jade-template-engine"
+      }
+    },
+    {
+      "src": "/post/9",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/python-multithreaded-preliminary"
+      }
+    },
+    {
+      "src": "/post/8",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/python-curses-module"
+      }
+    },
+    {
+      "src": "/post/7",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/2015-summary"
+      }
+    },
+    {
+      "src": "/post/6",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/how-can-i-prevent-sql-injection-in-php"
+      }
+    },
+    {
+      "src": "/post/5",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/simple-use-of-the-php-curl-library"
+      }
+    },
+    {
+      "src": "/post/4",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/the-crawler-of-zhihu-user-dynamic-monitoring"
+      }
+    },
+    {
+      "src": "/post/3",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/phpmyadmin-lack-mcrypt-extension"
+      }
+    },
+    {
+      "src": "/post/2",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/sudoers-is-world-writable"
+      }
+    },
+    {
+      "src": "/post/1",
+      "status": 301,
+      "headers": {
+        "Location": "/blog/ubuntu-lamp-environment-set-up"
+      }
+    }
+  ]
+}

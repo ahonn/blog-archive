@@ -6,19 +6,15 @@ module.exports = {
     extend: {
       colors: {
         primary: 'var(--primary-color)',
-        secondary: 'var(--secondary-color)',
-        background: 'var(--background)',
       },
       textColor: {
-        normal: 'var(--text-normal-color)',
+        body: 'var(--text-primary-color)',
       },
       backgroundColor: {
-        normal: 'var(--background)',
-        code: 'var(--code-background)',
-        'inline-code': 'var(--inline-code-background)',
+        primary: 'var(--background-primary-color)',
       },
       fontSize: {
-        tiny: '.9rem',
+        tiny: '.95rem',
       },
       opacity: {
         image: 'var(--image-opacity)',

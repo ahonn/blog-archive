@@ -1,14 +1,18 @@
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="author" content="{{ metadata.author.name }}" />
-{% if title %}
-<title>{{ title }} - {{ metadata.title }}</title>
-{% else %}
-<title>{{ metadata.title }}</title>
-{% endif %}
-<link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg" />
-<link rel="stylesheet" href="/assets/css/style.css" />
-<link
-  rel="preconnect dns-prefetch"
-  href="https://ahonn-me.oss-cn-beijing.aliyuncs.com"
-/>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="{{ metadata.author.name }}"/>
+  {% if title %}
+    <title>{{ title }} - {{ metadata.title }}</title>
+  {% else %}
+    <title>{{ metadata.title }}</title>
+  {% endif %}
+  <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg"/>
+  <link rel="stylesheet" href="/assets/css/style.css"/>
+  <link rel="stylesheet" href="/assets/css/prism/tomorrow.css"/>
+  <link rel="preconnect" href="https://ahonn-me.oss-cn-beijing.aliyuncs.com"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC&display=swap" rel="stylesheet">
+  <script async src="https://cdn.splitbee.io/sb.js"></script>
+</head>

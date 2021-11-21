@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="{{ metadata.language }}">
-  <head>
-    {% include "common/head.njk" %}
-  </head>
+  {% include "common/head.njk" %}
   <body>
-    <div class="min-h-screen w-full font-sans text-normal leading-normal">
-      {% include "common/header.njk" %}
+    <div class="min-h-screen w-full font-sans text-body bg-primary">
+      {% include "components/header.njk" %}
       <main class="max-w-screen-md mx-auto">
         <div class="px-4 sm:px-6 overflow-hidden">
           {{ content | safe }}
         </div>
       </main>
     </div>
+    {% include "components/google-analytics.njk" %}
   </body>
 </html>

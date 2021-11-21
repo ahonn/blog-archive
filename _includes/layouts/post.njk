@@ -1,9 +1,9 @@
 ---
 layout: layouts/base.njk
 ---
-<article class="my-6">
+<article class="my-8">
   <header class="mb-2">
-    <h1 class="my-2 text-primary text-3xl font-sans tracking-wide">
+    <h1 class="my-2 text-primary text-2xl font-serif tracking-wide">
       {{ title }}
     </h1>
     <div>
@@ -12,7 +12,13 @@ layout: layouts/base.njk
       </time>
     </div>
   </header>
-  <section>
+  <section class="post">
     {{ content | safe }}
   </section>
 </article>
+<div class="my-4">
+  <a class="text-primary" href="/">← 返回首页</a>
+</div>
+
+{% include "components/comment.njk" %}
+{% include "components/footer.njk" %}
