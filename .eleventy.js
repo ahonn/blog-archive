@@ -3,6 +3,7 @@ const Image = require('@11ty/eleventy-img');
 const TailwindCSS = require('eleventy-plugin-tailwindcss');
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const rss = require("@11ty/eleventy-plugin-rss");
+const { isAfter } = require('date-fns');
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(TailwindCSS);
@@ -49,5 +50,10 @@ module.exports = function (eleventyConfig) {
       .sort((a, b) => new Date(a.data.date) - new Date(b.data.date));
   });
 
-  console.log(eleventyConfig);
+  eleventyConfig.addCollection('posts', function (collection) {
+    return collection
+      .getAll()
+      .filter((item) => !item.data.featured)
+      .sort((a, b) => new Date(a.data.date) - new Date(b.data.date));
+  });
 };

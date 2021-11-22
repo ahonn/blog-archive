@@ -28,3 +28,17 @@ layout: layouts/home.njk
     {% endfor %}
   </ol>
 </div>
+
+<div class="my-8">
+  <h1 class="my-3 text-primary text-2xl font-semibold logo">Posts</h1>
+  {% set postslist = collections.posts | reverse %}
+  <ol>
+    {% for post in postslist %}
+      <li class="mb-2">
+        <a href="{{ post.url | url }}" class="text-tiny hover:text-primary">
+          {{ post.data.title }}
+        </a>
+      </li>
+    {% endfor %}
+  </ol>
+</div>
