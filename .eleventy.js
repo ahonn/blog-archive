@@ -50,10 +50,10 @@ module.exports = function (eleventyConfig) {
       .sort((a, b) => new Date(a.data.date) - new Date(b.data.date));
   });
 
-  eleventyConfig.addCollection('posts', function (collection) {
+  eleventyConfig.addCollection('restPosts', function (collection) {
     return collection
       .getAll()
-      .filter((item) => !item.data.featured)
+      .filter((item) => !item.data.featured && item.data.layout === 'post')
       .sort((a, b) => new Date(a.data.date) - new Date(b.data.date));
   });
 };

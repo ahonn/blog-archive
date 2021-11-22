@@ -31,7 +31,7 @@ layout: layouts/home.njk
 
 <div class="my-8">
   <h1 class="my-3 text-primary text-2xl font-semibold logo">Posts</h1>
-  {% set postslist = collections.posts | reverse %}
+  {% set postslist = collections.restPosts | reverse %}
   <ol>
     {% for post in postslist %}
       <li class="mb-2">
