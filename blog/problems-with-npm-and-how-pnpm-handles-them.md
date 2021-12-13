@@ -9,7 +9,7 @@ featured: true
 或者是明明自己开发的一个库在 A 项目中运行完好，但是安装到 B 项目之后却提示缺少依赖。就算没有遇到上面的两个问题，肯定也见过电脑磁盘上面占了大片空间的 node_modules 文件夹。
 
 前不久看到了一篇文章讲述 [Vue 以及相关的几个包都从 yarn 切换到了 pnpm](https://www.teqng.com/2021/12/07/%E4%B8%BA%E4%BB%80%E4%B9%88-vue-%E6%BA%90%E7%A0%81%E4%BB%A5%E5%8F%8A%E7%94%9F%E6%80%81%E4%BB%93%E5%BA%93%E8%A6%81%E8%BF%81%E7%A7%BB-pnpm/)，
-虽然是从 yarn workspace 迁移到了 pnpm workspace，但这也引起了我研究 pnpm 的兴趣。虽然很早就知道了 pnpm 但仅仅只是听说过，所以借这次机会研究并记录下来。
+虽然是从 yarn workspace 迁移到了 pnpm workspace，但这也引起了我研究 pnpm 的兴趣。虽然很早就知道了 pnpm，但是仅仅止步于听说过，正好借这次机会研究并记录下来。
 
 ## npm 的问题
 
@@ -88,5 +88,6 @@ pnpm 通过巧妙硬链接 + 软链接结合的方式完全实现了依赖树结
 - [How npm Works](https://npm.github.io/how-npm-works-docs/index.html)
 - [Phantom dependencies](https://rushjs.io/pages/advanced/phantom_deps/)
 - [NPM doppelgangers](https://rushjs.io/pages/advanced/npm_doppelgangers/)
+- [Why should we use pnpm?](https://medium.com/pnpm/why-should-we-use-pnpm-75ca4bfe7d93)
 - [npm 依赖管理中被忽略的那些细节](https://www.zoo.team/article/npm-details)
 - [为什么 vue 源码以及生态仓库要迁移 pnpm?](https://www.teqng.com/2021/12/07/%E4%B8%BA%E4%BB%80%E4%B9%88-vue-%E6%BA%90%E7%A0%81%E4%BB%A5%E5%8F%8A%E7%94%9F%E6%80%81%E4%BB%93%E5%BA%93%E8%A6%81%E8%BF%81%E7%A7%BB-pnpm/)
