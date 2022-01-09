@@ -21,9 +21,6 @@ layout: layouts/home.njk
   <ol>
     {% for post in postslist %}
       <li class="mb-2">
-        <time class="mr-1 text-sm text-gray-800 font-mono">
-          {{ post.date | format("yyyy-MM-dd") }}
-        </time>
         <a href="{{ post.url | url }}" class="hover:text-primary text-gray=600">
           {{ post.data.title }}
         </a>
