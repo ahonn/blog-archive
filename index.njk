@@ -5,10 +5,10 @@ layout: layouts/home.njk
 <div class="my-10 flex flex-col sm:flex-row sm:items-center">
   <img
     class="w-24 h-24 rounded-full sm:mr-8 mb-4 sm:mb-0"
-    src="/assets/img/avatar.jpeg" 
+    src="/assets/img/avatar.jpeg"
     alt="{{ metadata.author.name }}"
 />
-  <div class="leading-loose text-tiny">
+  <div class="leading-loose">
     {% for text in metadata.introduction %}
       <p>{{ text }}</p>
     {% endfor %}
@@ -21,21 +21,10 @@ layout: layouts/home.njk
   <ol>
     {% for post in postslist %}
       <li class="mb-2">
-        <a href="{{ post.url | url }}" class="text-tiny hover:text-primary">
-          {{ post.data.title }}
-        </a>
-      </li>
-    {% endfor %}
-  </ol>
-</div>
-
-<div class="my-8">
-  <h1 class="my-3 text-primary text-2xl font-semibold logo">Posts</h1>
-  {% set postslist = collections.restPosts | reverse %}
-  <ol>
-    {% for post in postslist %}
-      <li class="mb-2">
-        <a href="{{ post.url | url }}" class="text-tiny hover:text-primary">
+        <time class="mr-1 text-sm text-gray-800 font-mono">
+          {{ post.date | format("yyyy-MM-dd") }}
+        </time>
+        <a href="{{ post.url | url }}" class="hover:text-primary text-gray=600">
           {{ post.data.title }}
         </a>
       </li>
