@@ -2,4 +2,22 @@
 layout: layouts/base.njk
 ---
 
-{{ content | safe }}
+<div class="my-10">
+  <div class="content">
+    {{ content | safe }}
+  </div>
+</div>
+
+<div class="my-6">
+  <h1 class="mb-4 text-primary text-2xl font-semibold logo">Featured</h1>
+  {% set postslist = collections.featured | reverse | head(15) %}
+  <ol class="list-disc list-inside">
+    {% for post in postslist %}
+      <li class="mb-2">
+        <a href="{{ post.url | url }}" class="hover:text-primary text-gray=600">
+          {{ post.data.title }}
+        </a>
+      </li>
+    {% endfor %}
+  </ol>
+</div>

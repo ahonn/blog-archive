@@ -1,0 +1,18 @@
+---
+layout: layouts/base.njk
+---
+
+<div class="my-10">
+  <ol>
+    {% for post in collections.posts | reverse %}
+      <li class="mb-3">
+        <a href="{{ post.url | url }}" class="hover:text-primary text-gray=600 text-md">
+          {{ post.data.title }}
+        </a>
+        <time class="ml-1 text-xs text-gray-400">
+          {{ post.date | format("yyyy-MM-dd") }}
+        </time>
+      </li>
+    {% endfor %}
+  </ol>
+</div>

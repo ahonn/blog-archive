@@ -1,14 +1,9 @@
 {
   "title": "Yuexun's Blog",
   "url": "https://yuexunjiang.me",
-  "introduction": [
-    "我是 Yuexun，一个在深圳生活的前端工程师。",
-    "目前在腾讯做在线协作文档相关的开发工作，希望有天能够作出令人喜爱的产品。",
-    "写博客旨在记录我所折腾和思考的过程，对相关内容有兴趣欢迎留言交流。"
-  ],
   "since": 2015,
   "language": "zh",
-  "description": "I am writing about my experiences as a naval navel-gazer.",
+  "description": "",
   "author": {
     "name": "Yuexun Jiang",
     "email": "yuexunjiang@gmail.com",

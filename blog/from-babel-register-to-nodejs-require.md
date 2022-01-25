@@ -2,7 +2,6 @@
 layout: post
 title: 从 @babel/register 到 node.js require()
 date: 2019-04-09
-featured: true
 ---
 
 通常我们会用 babel 来将浏览器未兼容的新语法编译为兼容的代码，以便在旧浏览器或者环境下运行。

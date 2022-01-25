@@ -2,7 +2,6 @@
 layout: post
 date: 2016-05-14
 title: 记第一次面试
-featured: true
 ---
 
 第一次正正经经的去面试，虽然只是个软件开发暑期实习生。

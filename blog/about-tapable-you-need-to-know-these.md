@@ -2,7 +2,6 @@
 layout: post
 title: 关于 tapable 你需要知道这些
 date: 2019-08-21
-featured: true
 ---
 
 在阅读 webpack 前如果不了解 [tapable](https://github.com/webpack/tapable) 的话，很有可能会看得云里雾里，那么 tapable 到底是什么，又有什么用呢？本文主要介绍 tapable 的使用以及相关实现，通过学习 tapable 能够进一步的了解 webpack 的插件机制。以下内容皆基于 [tapable v1.1.3 版本](https://github.com/webpack/tapable/tree/tapable-1)。
