@@ -2,13 +2,13 @@
 layout: layouts/base.njk
 ---
 
-<div class="my-10">
+<div class="my-6 sm:my-8">
   <div class="content">
     {{ content | safe }}
   </div>
 </div>
 
-<div class="my-6">
+<div class="my-6 sm:my-8">
   <h1 class="mb-4 text-primary text-2xl font-semibold logo">Featured</h1>
   {% set postslist = collections.featured | reverse | head(15) %}
   <ol class="list-disc list-inside">

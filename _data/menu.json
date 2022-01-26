@@ -1,7 +1,7 @@
 [
   {
-    "name": "博客",
-    "url": "/blog",
-    "event": "all-blog"
+    "name": "所有文章",
+    "url": "/posts",
+    "event": "posts"
   }
 ]

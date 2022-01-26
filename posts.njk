@@ -2,14 +2,14 @@
 layout: layouts/base.njk
 ---
 
-<div class="my-10">
+<div class="my-6 sm:my-8">
   <ol>
     {% for post in collections.posts | reverse %}
       <li class="mb-3">
-        <a href="{{ post.url | url }}" class="hover:text-primary text-gray=600 text-md">
+        <a href="{{ post.url | url }}" class="hover:text-primary text-gray=600 text-lg sm:text-base">
           {{ post.data.title }}
         </a>
-        <time class="ml-1 text-xs text-gray-400">
+        <time class="sm:inline sm:ml-1 text-xs text-gray-400 block">
           {{ post.date | format("yyyy-MM-dd") }}
         </time>
       </li>
