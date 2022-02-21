@@ -1,12 +1,7 @@
 [
   {
-    "name": "Posts",
+    "name": "所有文章",
     "url": "/posts",
     "event": "posts"
-  },
-  {
-    "name": "Note",
-    "url": "https://note.yuexunjiang.me",
-    "event": "note"
   }
 ]
