@@ -3,6 +3,7 @@ layout: post
 title: "npm 存在的问题以及 pnpm 是怎么处理的"
 date: 2021-12-13
 featured: true
+description: 要理解为什么 pnpm 要那样实现，首先我们需要知道现阶段 npm 还存在着哪些问题，然后我们在带着问题去 pnpm 中看看他是怎么解决的。
 ---
 
 在日常开发中我们时常会遇到 node_modules 中的依赖问题，前一次运行出错删除 package-lock.json 和 node_modules 之后重新安装就好了。

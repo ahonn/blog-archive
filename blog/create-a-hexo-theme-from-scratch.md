@@ -3,6 +3,7 @@ layout: post
 title: 从零开始制作 Hexo 主题
 date: 2016-12-15
 featured: true
+description: 本文将会手把手教你从零开始开发一个简单的博客主题
 ---
 
 ## 写在前面

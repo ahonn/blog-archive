@@ -3,6 +3,7 @@ layout: post
 title: 使用 TiddlyWiki 进行个人知识管理
 date: 2020-05-30
 featured: true
+description: 近一段时间在研究个人知识管理，期望能够找到一个好用并且能够长期使用的「非线性笔记」软件来进行管理。近期比较火的 Roam Research 与 Notion 都尝试过，但可惜的是两者都有些地方我不是特别满意。最后我选择了 TiddlyWiki 来进行知识管理。
 ---
 
 近一段时间在研究个人知识管理，期望能够找到一个好用并且能够长期使用的「非线性笔记」软件来进行管理。近期比较火的 Roam Research 与 Notion 都尝试过，但可惜的是两者都有些地方我不是特别满意。最后我选择了 TiddlyWiki 来进行知识管理。

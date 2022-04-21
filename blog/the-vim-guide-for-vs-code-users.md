@@ -3,6 +3,7 @@ layout: post
 date: 2020-09-29
 title: 写给 VS Code 用户的 Vim 入坑指南
 featured: true
+description: 本文会从最基本的使用和配置开始介绍作为前端工程师怎么从零到一到开始使用 Vim。当然，我也不期望因为一篇文章而让广大的 VSCode 用户转用 Vim，所以最后会介绍如何在 VSCode 中使用 Vim 插件进行更高效的编码。
 ---
 
 现实当中使用 Vim 来写前端的人是少之又少，大多数人基本上都是使用 VSCode。但作为「编辑器之神」，不管使不使用 Vim 进行编码，学习 Vim 的编辑模式都是有好处的。

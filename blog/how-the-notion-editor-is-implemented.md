@@ -3,6 +3,7 @@ layout: post
 title: "Notion 编辑器是怎么实现的？"
 date: 2021-03-25
 featured: true
+description: 对 Notion 的编辑器进行了分析研究，主要聚焦在文本编辑，大概的了解到了 Notion 的编辑器实现以及其编辑器的不足。
 ---
 
 > 本文写于 2020 年 12 月，当你读到本文时文中提到的部分 Notion 内容可能已经过时，望读者知晓

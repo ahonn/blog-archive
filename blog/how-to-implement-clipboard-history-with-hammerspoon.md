@@ -3,6 +3,7 @@ layout: post
 title: 如何使用 Hammerspoon 实现剪贴板历史
 date: 2019-04-30
 featured: true
+description: Hammerspoon 是一款 macOS 下的自动化工具，软件本身几乎没有什么功能。本文将通过提供的相关 API，编写 lua 脚本一步一步实现类似 Alfred / LaunchBar 剪贴板历史的功能。
 ---
 
 ## 写在前面
